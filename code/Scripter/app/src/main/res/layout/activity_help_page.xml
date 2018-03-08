@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the code for the layout of the Help Page. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--Adding the tab buttons that span across all of the pages-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/Home_Button"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="goToMain"
+            android:text="Home" />
+
+        <Button
+            android:text="Help"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:id="@+id/Help_Button"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+            <!-- Help page does not need ability to go to help page -->
+
+        <Button
+            android:text="Scripts"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:id="@+id/Script_Button"
+            android:onClick="goToScriptsActivity"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <!--Make this page scrollable -->
+    <ScrollView android:id="@+id/ScrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dip">
+
+            <!-- The text used to introduce the help page -->
+            <TextView
+                android:text="@string/help_page_intro"
+                android:id="@+id/help_page_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:padding="2dip"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:padding="2dip"
+                android:text="@string/help_page_section_title_1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!--The text explaining now to write scripts -->
+            <TextView
+                android:id="@+id/howToWriteScript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/howToWriteScript"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/sample_script1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/textView2"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!--The text listing the states and functions available -->
+            <TextView
+                android:id="@+id/statesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/stateText"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <!--The step-by-step tutorial-->
+            <TextView
+                android:id="@+id/stepByStepHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="Step-By-Step Tutorial"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step1"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/step1image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/sample_script1" />
+
+            <TextView
+                android:id="@+id/step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step2"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/step2image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/downloaderbutton" />
+
+            <TextView
+                android:id="@+id/step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step3"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/step3image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/step3" />
+
+            <TextView
+                android:id="@+id/step4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step4"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/step4image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/step4" />
+
+            <TextView
+                android:id="@+id/step5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step5"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/step5image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/on_button_image" />
+
+            <TextView
+                android:id="@+id/step6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step6"
+                android:textColor="#52D5AA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/step6image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/off_button_image" />
+
+            <TextView
+                android:id="@+id/step7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:text="@string/step7"
+                android:textColor="#52D5AA"
+                android:autoLink="web"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/step7" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

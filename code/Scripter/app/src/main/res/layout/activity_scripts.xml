@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The code for the layout of the script list page-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scripts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.graham.scripter.ScriptsActivity">
+
+    <!--Adding the tab buttons that span across all of the pages-->
+    <Button
+        android:text="Home"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Home_Button"
+        android:onClick="goToMain" />
+
+    <Button
+        android:text="Scripts"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:id="@+id/Script_Button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <!-- Scripts page does not need ability to go to scripts page -->
+
+    <Button
+        android:id="@+id/Help_Button"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="goToHelpPage"
+        android:text="Help" />
+
+    <!--The code for a list that automatically updates as scripts
+     are downloaded and installed. User has the ability to have multiple
+     choice in the list -->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="multipleChoice"
+        android:id="@+id/scriptList"
+        android:layout_below="@+id/Home_Button" />
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the code to layout the main home page -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.graham.scripter.MainActivity">
+
+    <!--Adding the tab buttons that span across all of the pages-->
+    <Button
+        android:text="Home"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Home_Button"/>
+    <!-- Home page does not need ability to go to home page -->
+    <Button
+        android:text="Help"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:id="@+id/Help_Button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToHelpPage"
+        tools:onClick="goToHelpPage" />
+
+    <Button
+        android:text="Scripts"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:id="@+id/Script_Button"
+        android:onClick="goToScriptsActivity"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout android:layout_width="wrap_content"
+        android:id="@+id/rl_onoff"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/Home_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:orientation="horizontal">
+
+            <!--The code for the green start button -->
+            <ImageView
+                android:id="@+id/start_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:onClick="startMonitorState"
+                android:src="@drawable/on_button_image"
+                android:visibility="visible"
+                tools:onClick="startMonitorState" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:gravity="center_horizontal|center"
+                android:text="Start Scripts"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:orientation="horizontal">
+
+            <!--The code for the red stop button -->
+            <ImageView
+                android:id="@+id/stop_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:onClick="stopMonitorState"
+                android:src="@drawable/off_button_image"
+                android:visibility="visible"
+                tools:onClick="stopMonitorState" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:gravity="center_horizontal|center"
+                android:text="Stop Scripts"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:orientation="horizontal">
+
+            <!--The code for the orange download button -->
+            <ImageView
+                android:id="@+id/download_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:elevation="1dp"
+                android:onClick="downloadScript"
+                android:src="@drawable/downloaderbutton" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:gravity="center_horizontal|center"
+                android:text="Download Script"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

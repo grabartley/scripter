@@ -1,0 +1,24 @@
+<resources> <!--This is were any text in the app is stored rather than hardcoding the code-->
+    <string name="app_name">Scripter</string>
+    <string name="start_scripts">Start Scripts</string>
+    <string name="stop_scripts">Stop Scripts</string>
+    <string name="scripts">Scripts</string>
+    <string name="enter_URL">Enter a URL\.\.\.</string>
+    <string name="enter_JS">Enter some JavaScript\.\.\.</string>
+    <string name="enter_filename">Enter a filename\.\.\.</string>
+    <string name="download_script">Download</string>
+    <string name="create_script">Create</string>
+    <string name="help_page_intro">Here you will find information on how to use Scripter and it\'s features. \nFor more information, <a href="http://student.computing.dcu.ie/~bartleg3/scripter/">visit our website.</a></string>
+    <string name="help_page_section_title_1">How to Write Scripts</string>
+    <string name="howToWriteScript">When writing your script: \n -Write your script in the JavaScript programming language.\n -Do not add comments. \n -Specify dependencies/triggers for specific state changes. Otherwise your script will run when any state changes. \n -See the example script below for layout guideline. This example script opens the devices music player if the users headphones are plugged in on a weekday.  </string>
+    <string name="textView2">States and Functions</string>
+    <string name="stateText">The following states are available for you to use when writing your scripts:\n STATES \n -minute \n -hour \n -month \n -year \n -dayOfMonth \n -dayOfWeek \n -headphonesPluggedIn \n -latitude \n -longitude \n -wifiConnected \n -SSID \n \n
+    FUNCTIONS \n -toastMessage \n -openCamera \n -openMusicPlayer \n -isWeekday \n -isWeekend \n -openWebpage \n -displayNotification \n -withinMeterRadiusOf \n -turnOnSilent \n -turnOnVibrate \n -turnOnSound \n -isOnSilent \n -isOnVibrate \n -isOnSound \n -sendSMS </string>
+    <string name="step1">1. Create your script and store it online.</string>
+    <string name="step2">2. Open Scripter and hit the Download button.</string>
+    <string name="step3">3. Enter your scripts URL, give it a name, and download.</string>
+    <string name="step4">4. Ensure your script is enabled in the script list.</string>
+    <string name="step5">5. Hit the green Start button to start yur scripts! (Scripter will now run in the background of your device)</string>
+    <string name="step6">6. Hit the red Stop button to disable your scripts!</string>
+    <string name="step7">7. Hold down on the script to delete, rename, re-download and view the code online.</string>
+</resources>
